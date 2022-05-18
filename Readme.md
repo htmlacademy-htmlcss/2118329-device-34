@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Роман Шпунтенко](https://up.htmlacademy.ru/htmlcss/34/user/2118329).
-* Наставник: `Артем Макаров`.
+* Наставник: [Артем Макаров](https://htmlacademy.ru/profile/deepsick).
 
 ---
 
