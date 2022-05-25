@@ -4,9 +4,84 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
   </head>
+
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header class="page-header">
+      <img class="logo" src="" alt="Логотип 'Девайс'">
+      <ul class="header-user-functions">
+        <li class="header-function">
+          <form class="header-search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="search-form-label"> Найти
+              <input type="search" name="search-form" placeholder="Текст поиска">
+            </label>
+          </form>
+        </li>
+        <li class="header-function">
+          <a class="header-button" href="#">Войти</a>
+        </li>
+        <li class="header-function">
+          <a class="header-button" href="#">Сравнить</a>
+        </li>
+        <li class="header-function">
+          <a class="header-button" href="#">Корзина</a>
+        </li>
+      </ul>
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a class="navigation-item" href="#">Каталог товаров</a>
+            <input class="navigation-button" type="button" name="Expand catalogue">
+            <ul class="navigation-catalogue-categories">
+              <li><a class="navigation-catalogue-item" href="#">Виртуальная реальность</a></li>
+              <li><a class="navigation-catalogue-item" href="#">Моноподы для селфи</a></li>
+              <li><a class="navigation-catalogue-item" href="#">Экшн-камеры</a></li>
+              <li><a class="navigation-catalogue-item" href="#">Фитнес-браслеты</a></li>
+              <li><a class="navigation-catalogue-item" href="#">Умные часы</a></li>
+              <li><a class="navigation-catalogue-item" href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="navigation-item" href="#">Доставка</a>
+            <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+              <p>
+                <h2 class="delivery-form-title">Доставка под заказ</h2>
+                <input class="delivery-form-close" type="button">
+              </p>
+              <p class="delivery-form-field">
+                <label class="delivery-form-field-name">Ваше имя:
+                  <input type="text" name="buyer-name" placeholder="Введите имя">
+                </label>
+              </p>
+              <p class="delivery-form-field">
+                <label class="delivery-form-field-email">Ваш e-mail:
+                  <input type="email" name="buyer-email" placeholder="Введите email">
+                </label>
+              </p>
+              <p class="delivery-form-field">
+                <label class="delivery-form-field-description">Что нужно привезти:
+                  <input type="text" name="delivery-description" placeholder="В свободной форме">
+                </label>
+              </p>
+              <p class="delivery-form-field">
+                <label class="delivery-form-field-quantity">Количество:
+                  <input type="number" name="delivery-quantity" value="1">
+                </label>
+              </p>
+              <p class="delivery-form-field">
+                <label class="delivery-form-field-submit">
+                  <input type="submit" name="submit-button">
+                </label>
+              </p>
+            </form>
+          </li>
+          <li>
+            <a class="navigation-item" href="#">Гарантия</a>
+          </li>
+          <li>
+            <a class="navigation-item" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
