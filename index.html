@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
-      <img class="logo" src="images/logos/header-logo.png" height="36" width="145" alt="Логотип 'Девайс'"><!-- Здесь в PNG, поскольку требует полупрозрачности-->
+      <img class="logo" src="images/logos/header-logo.png" height="36" width="145" alt="Логотип 'Девайс'">
       <ul class="header-user-functions">
         <li class="header-function">
           <form class="header-search-form" action="https://echo.htmlacademy.ru" method="get">
@@ -29,32 +30,32 @@
       </ul>
       <nav class="navigation">
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <a href="catalog.html">Каталог товаров</a>
+          <li>
+            <a class="navigation-item" href="catalog.html">Каталог товаров</a>
             <input class="navigation-button" type="button" name="Expand catalogue" value="expand">
             <ul class="navigation-catalogue-categories">
-              <li class="navigation-catalogue-item">
-                <a href="#">Виртуальная реальность</a>
+              <li>
+                <a class="navigation-catalogue-item" href="#">Виртуальная реальность</a>
               </li>
-              <li class="navigation-catalogue-item">
-                <a href="#">Моноподы для селфи</a>
+              <li>
+                <a class="navigation-catalogue-item" href="#">Моноподы для селфи</a>
               </li>
-              <li class="navigation-catalogue-item">
-                <a href="#">Экшн-камеры</a>
+              <li>
+                <a class="navigation-catalogue-item" href="#">Экшн-камеры</a>
               </li>
-              <li class="navigation-catalogue-item">
-                <a href="#">Фитнес-браслеты</a>
+              <li>
+                <a class="navigation-catalogue-item href="#">Фитнес-браслеты</a>
               </li>
-              <li class="navigation-catalogue-item">
-                <a href="#">Умные часы</a>
+              <li>
+                <a class="navigation-catalogue-item" href="#">Умные часы</a>
               </li>
-              <li class="navigation-catalogue-item">
-                <a href="#">Квадрокоптеры</a>
+              <li>
+                <a class="navigation-catalogue-item" href="#">Квадрокоптеры</a>
               </li>
             </ul>
           </li>
-          <li class="navigation-item">
-            <a href="#">Доставка</a>
+          <li>
+            <a class="navigation-item" href="#">Доставка</a>
             <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset>
                 <h2 class="delivery-form-title">Доставка под заказ</h2>
@@ -65,33 +66,33 @@
                   </label>
                 </p>
                 <p class="delivery-form-field">
-                  <label class="delivery-form-field-email">Ваш e-mail:
+                  <label class="delivery-form-field-name">Ваш e-mail:
                     <input type="email" name="buyer-email" placeholder="Введите email" required>
                   </label>
                 </p>
                 <p class="delivery-form-field">
-                  <label class="delivery-form-field-description">Что нужно привезти:
+                  <label class="delivery-form-field-name">Что нужно привезти:
                     <input type="text" name="delivery-description" placeholder="В свободной форме" required>
                   </label>
                 </p>
                 <p class="delivery-form-field">
-                  <label class="delivery-form-field-quantity">Количество:
+                  <label class="delivery-form-field-name">Количество:
                     <input type="number" name="delivery-quantity" value="1" required>
                   </label>
                 </p>
                 <p class="delivery-form-field">
-                  <label class="delivery-form-field-submit">
+                  <label class="main-page-button">
                     <input type="submit" name="submit-button">
                   </label>
                 </p>
               </fieldset>
             </form>
           </li>
-          <li class="navigation-item">
-            <a href="#">Гарантия</a>
+          <li>
+            <a class="navigation-item" href="#">Гарантия</a>
           </li>
-          <li class="navigation-item">
-            <a href="#">Контакты</a>
+          <li>
+            <a class="navigation-item" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -152,41 +153,80 @@
       <section>
         <h2 class="visually-hidden"> Категории товаров</h2>
         <ul class="catalogue-categories">
-          <li><a class="catalogue-item" href="#">Виртуальная реальность</a></li>
-          <li><a class="catalogue-item" href="#">Моноподы для селфи</a></li>
-          <li><a class="catalogue-item" href="#">Экшн-камеры</a></li>
-          <li><a class="catalogue-item" href="#">Фитнес-браслеты</a></li>
-          <li><a class="catalogue-item" href="#">Умные часы</a></li>
-          <li><a class="catalogue-item" href="#">Квадрокоптеры</a></li>
+          <li>
+            <div class="catalogue-image">
+              <div class="virtual-reality-image"></div>
+            </div>
+            <a class="catalogue-item" href="#">Виртуальная реальность</a>
+          </li>
+          <li>
+            <div class="catalogue-image">
+              <div class="monopods-image"></div>
+            </div>
+            <a class="catalogue-item" href="#">Моноподы для селфи</a>
+          </li>
+          <li>
+            <div class="catalogue-image">
+              <div class="action-camera-image"></div>
+            </div>
+            <a class="catalogue-item" href="#">Экшн-камеры</a>
+          </li>
+          <li>
+            <div class="catalogue-image">
+              <div class="fitness-bracelet-image"></div>
+            </div>
+            <a class="catalogue-item" href="#">Фитнес-браслеты</a>
+          </li>
+          <li>
+            <div class="catalogue-image">
+              <div class="smart-watch-image"></div>
+            </div>
+            <a class="catalogue-item" href="#">Умные часы</a>
+          </li>
+          <li>
+            <div class="catalogue-image">
+              <div class="quadrocopter-image"></div>
+            </div>
+            <a class="catalogue-item" href="#">Квадрокоптеры</a>
+          </li>
         </ul>
       </section>
-      <section>
+      <section class="advantages">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul>
           <li>
             <a class="main-page-button" href="#">Доставка</a>
-            <h3>Доставка</h3>
+            <h3 class="advantage-title">Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо
               к вашему подъезду совершенно бесплатно! Ведь
               мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <div class="delivery-image"></div>
           </li>
           <li>
             <a class="main-page-button" href="#">Гарантия</a>
-            <h3>Гарантия</h3>
+            <h3 class="advantage-title">Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
+              <div class="guarantee-image"></div>
             </li>
           <li>
             <a class="main-page-button" href="#">Кредит</a>
-            <h3>Кредит</h3>
+            <h3 class="advantage-title">Кредит</h3>
             <p>Залезть в долговую яму стало проще! 
               Кредитные консультанты подберут для вас наиболее выгодные условия кредита. 
               Выгодные для банка, разумеется.</p>
+              <div class="credit-image"></div>
           </li>
         </ul>
       </section>
-      <p><a class="special-delivery" href="#">Доставим редкий товар под заказ</a></p>
+      <aside class="delivery-box">
+        <div class="delivery-image-space">
+          <div class="special-delivery-image"></div>
+        </div>
+        <p><a class="special-delivery" href="#">Доставим редкий товар под заказ</a></p>
+        <div class="delivery-info"></div>
+      </aside>
       <section class="about-us">
         <h2 class="main-page-heading">О нас</h2>
         <p class="index-main-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -207,19 +247,19 @@
       <section class="contact-us">
         <h2 class="main-page-heading">Контакты</h2>
         <p class="index-main-text">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
-        <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
+        <p class="contacts-subtitle">Интернет-магазин «Девайс»</p>
         <address class="contacts-address">
           <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
-        <h3 class="contacts-subtitle">Время работы</h3>
+        <p class="contacts-subtitle">Время работы</p>
         <ul class="contacts-schedule">
           <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00 </li>
           <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
         <a class="main-page-button" href="#">Напишите нам</a>
       </section>
-      <section>
+      <section class="mailing-section">
         <h2 class="main-page-heading">Подпишитесь на рассылку</h2>
         <p class="index-main-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, 
           а также акции, спецпредложения и вот это вот всё.</p>
@@ -246,7 +286,7 @@
           <a class="footer-navigation-item" href="#">Контакты</a>
         </li>
       </ul>
-      <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <p class="contacts-phone">Тел.: <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a></p>
       <ul class="socials">
         <li>
           <a class="socials-link" href="https://t.me/htmlacademy">
