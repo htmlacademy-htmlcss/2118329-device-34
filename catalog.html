@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Девайс: Каталог</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -66,17 +67,17 @@
                 </label>
               </p>
               <p class="delivery-form-field">
-                <label class="delivery-form-field-email">Ваш e-mail:
+                <label class="delivery-form-field-name">Ваш e-mail:
                   <input type="email" name="buyer-email" placeholder="Введите email" required>
                 </label>
               </p>
               <p class="delivery-form-field">
-                <label class="delivery-form-field-description">Что нужно привезти:
+                <label class="delivery-form-field-name">Что нужно привезти:
                   <input type="text" name="delivery-description" placeholder="В свободной форме" required>
                 </label>
               </p>
               <p class="delivery-form-field">
-                <label class="delivery-form-field-quantity">Количество:
+                <label class="delivery-form-field-name">Количество:
                   <input type="number" name="delivery-quantity" value="1" required>
                 </label>
               </p>
@@ -112,7 +113,7 @@
         </ul>
       </header>
       <section class="catalog-filters">
-        <h2 class="visually-hidden">Фильтр:</h2>
+        <h2 class="filter-title">Фильтр:</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Цвет</legend>
@@ -166,10 +167,11 @@
               </li>
             </ul>
           </fieldset>
-        <button class="button" type="submit">Показать</button>
+        <button class="filter-button" type="submit">Показать</button>
         </form>
       </section>
       <section class="item-cards">
+        <p class="filter-title">сортировка:</p>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Популярные</option>
           <option value="cheap">Дешёвые</option>
@@ -205,10 +207,10 @@
             <p class="product-card-price">1 500 ₽</p>
           </li>
         </ul>
-        <button class="button pagination-show-more" type="button">Показать ещё</button>
+        <button class="pagination-show-more" type="button">Загрузить ещё</button>
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev pagination-disabled">
+            <a class="pagination-prev pagination-disabled">
               <span class="pagination-button">Назад</span>
             </a>
           </li>
@@ -228,8 +230,8 @@
             <a class="pagination-link" href="#">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">
-              <span class="visually-hidden">Вперёд</span>
+            <a class="pagination-next" href="#">
+              <span class="pagination-button">Вперёд</span>
             </a>
           </li>
         </ul>
@@ -251,7 +253,7 @@
           <a class="footer-navigation-item" href="#">Контакты</a>
         </li>
       </ul>
-      <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <p class="contacts-phone">Тел.: <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a></p>
       <ul class="socials">
         <li>
           <a class="socials-link" href="https://t.me/htmlacademy">
