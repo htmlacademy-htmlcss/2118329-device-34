@@ -8,14 +8,14 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="logo" src="images/logos/header-logo.png" height="36" width="145" alt="Логотип 'Девайс'">
+      <img class="header-logo" src="images/logos/header-logo.png" height="36" width="145" alt="Логотип 'Девайс'">
       <div class="header-general-functions">
         <ul class="header-user-functions">
           <li class="header-function">
             <form class="header-search-form" action="https://echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden"> Найти
-                <input type="search" name="search-form" placeholder="Текст поиска">
-              </label>
+              <label class="visually-hidden" for="header-search-field">Найти</label>
+              <input id="header-search-field" class="header-search-space" type="search" name="search-form"
+              placeholder="Текст поиска">
               <button class="header-button" type="submit">Найти</button>
             </form>
           </li>
@@ -48,7 +48,7 @@
                 <a class="navigation-catalogue-item" href="#">Экшн-камеры</a>
               </li>
               <li>
-                <a class="navigation-catalogue-item href="#">Фитнес-браслеты</a>
+                <a class="navigation-catalogue-item" href="#">Фитнес-браслеты</a>
               </li>
               <li>
                 <a class="navigation-catalogue-item" href="#">Умные часы</a>
@@ -140,7 +140,7 @@
             <p class="slider-item-number">03</p>
             <img class="stock-image" src="images/slider/slider-selfie-stick.png" height="560" width="560" alt="Палка для селфи">
             <h3 class="slider-item-title">Делай селфи, как Бен Стиллер! </h3>
-            <p class="slider-item-description">Самая длинная палка для селфи доступна в нашем магазине. 
+            <p class="slider-item-description">Самая длинная палка для селфи доступна в нашем магазине.
               Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
             <a class="main-page-button" href="#">Подробнее</a>
             <dl class="slider-item-features">
@@ -210,26 +210,32 @@
             </li>
           </ul>
           <ul class="advantages-description">
-            <li>
+            <li class="advantages-container">
+              <div class="advantages-text">
               <h3 class="advantage-title">Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо
               к вашему подъезду совершенно бесплатно! Ведь
               мы неплохо заработаем, поднимая его на ваш этаж.</p>
-                <div class="delivery-image"></div>
+              </div>
+              <div class="delivery-image"></div>
             </li>
-            <li>
+            <li class="advantages-container">
+              <div class="advantages-text">
               <h3 class="advantage-title">Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый.
               Товар, не дом, конечно же.</p>
-                <div class="guarantee-image"></div>
+              </div>
+              <div class="guarantee-image"></div>
             </li>
-            <li>
+            <li class="advantages-container">
+              <div class="advantages-text">
               <h3 class="advantage-title">Кредит</h3>
-              <p>Залезть в долговую яму стало проще! 
-              Кредитные консультанты подберут для вас наиболее выгодные условия кредита. 
+              <p>Залезть в долговую яму стало проще!
+              Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
               Выгодные для банка, разумеется.</p>
-                <div class="credit-image"></div>
+              </div>
+              <div class="credit-image"></div>
             </li>
           </ul>
         </section>
@@ -277,21 +283,25 @@
       </div>
       <div class="mailing-wrapper">
         <section class="mailing-section">
-          <h2 class="main-page-heading">Подпишитесь на рассылку</h2>
-          <p class="index-main-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, 
-          а также акции, спецпредложения и вот это вот всё.</p>
-          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="subscription-field" type="email" name="subscription-email" placeholder="Ваш e-mail" required>
-            <input type="submit" name="submit-button" value="Подписаться">
+          <div class="mailing-text">
+            <h2 class="main-page-heading">Подпишитесь на рассылку</h2>
+            <p class="index-main-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками,
+            а также акции, спецпредложения и вот это вот всё.</p>
+          </div>
+          <div class="mailing-form">
+            <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+              <input class="subscription-field" type="email" name="subscription-email" placeholder="Ваш e-mail" required>
+              <input class="subscription-button" type="submit" name="submit-button" value="Подписаться">
+            </form>
             <p class="subscription-form-comment">Это бесплатно!</p>
-          </form>
+          </div>
         </section>
       </div>
     </main>
     <footer class="page-footer">
       <div class="footer-wrapper">
         <div class="footer-left-column">
-          <img class="logo" src="images/logos/footer-logo.svg" height="36" width="145" alt="Логотип 'Девайс'">
+          <img class="footer-logo" src="images/logos/footer-logo.svg" height="36" width="145" alt="Логотип 'Девайс'">
           <address class="footer-address">
             <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           </address>
@@ -310,21 +320,21 @@
           </ul>
           <ul class="socials">
             <li>
-              <a class="socials-link" href="https://t.me/htmlacademy">
+              <a class="socials-link telegram-icon" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">
                   Telegram
                 </span>
               </a>
             </li>
             <li>
-              <a class="socials-link" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="socials-link youtube-icon" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">
                   YouTube
                 </span>
               </a>
             </li>
             <li>
-              <a class="socials-link" href="https://twitter.com/htmlacademy_ru">
+              <a class="socials-link twitter-icon" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">
                   Twitter
                 </span>
@@ -333,10 +343,10 @@
           </ul>
         </div>
         <div class="footer-right-column">
-          <p class="contacts-phone">Тел.: <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a></p>
-          <a href="https://htmlacademy.ru/"><img class="html-academy-logo" src="images/logos/html-academy-logo.svg" 
+          <p class="footer-contacts">Тел.: <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a></p>
+          <a href="https://htmlacademy.ru/"><img class="html-academy-logo" src="images/logos/html-academy-logo.svg"
             height="33" width="115" alt="Логотип HTML Academy"></a>
-        </div> 
+        </div>
       </div>
     </footer>
   </body>
