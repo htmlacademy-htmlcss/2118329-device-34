@@ -19,9 +19,21 @@
           <form class="header-search-form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="header-search-field">Найти</label>
             <input id="header-search-field" class="header-search-space" type="search" name="search-form"
-              placeholder="Текст поиска">
-            <button class="header-button header-search-button" type="submit">Найти</button>
+              placeholder="Поиск по сайту">
+            <button class="header-search-button" type="submit">Найти</button>
           </form>
+        </li>
+        <li class="header-button-area profile-logged-in">
+          <a class="header-button" href="#">
+            <svg class="profile-icon" width="15" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#a)"><path d="M1 12.4h13a6.3 6.3 0 0 0-4.7-5.5c1-.6 1.7-1.7 1.7-3C11 1.9 9.4.4 7.5.4A3.5 3.5 0 0 0 4 3.9c0
+                1.3.7 2.4 1.7 3A6.3 6.3 0 0 0 1 12.4Z" fill="#000"/>
+              </g>
+              <defs><clipPath id="a"><path fill="#fff" transform="translate(0 .4)" d="M0 0h15v12H0z"/></clipPath>
+              </defs>
+            </svg>
+            Войти
+          </a>
         </li>
         <li class="header-button-area">
           <a class="header-button" href="#">
@@ -36,7 +48,7 @@
           </a>
         </li>
         <li class="header-button-area">
-          <button class="header-button">Выйти</button>
+          <button class="header-button log-out-button">Выйти</button>
         </li>
       </ul>
       <ul class="header-cart-buttons">
@@ -52,9 +64,33 @@
         </li>
         <li class="cart-button-area">
           <a class="header-button" href="#">
-            <img class="cart-icon" src="images/header-icons/header-cart-icon.svg" alt="Иконка 'Корзина'">
+            <span class="items-number"></span>
+            <svg class="cart-icon" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.3 5.39-3.5.2L8.6.69c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.29l2.2 3.2H5.9L8 2.29Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .39)" d="M0 0h16v14H0z"/></clipPath></defs></svg>
             Корзина
           </a>
+          <div class="cart-popover popover-closed">
+            <ul class="popover-items-list">
+              <li class="popover-cart-item">
+                <a class="popover-item-link" href="#">
+                  <img class="popover-image" src="images/cart-popover-item-one.jpg" alt="Любительская селфи-палка">
+                  <p class="cart-item-title">Любительская селфи-палка</p>
+                </a>
+                <button class="delete-button"><span class="visually-hidden">Удалить</span></button>
+              </li>
+              <li class="popover-cart-item">
+                <a class="popover-item-link" href="#">
+                  <img class="popover-image" src="images/cart-popover-item-two.jpg" alt="Профессиональная селфи-палка">
+                  <p class="cart-item-title">Профессиональная селфи-палка</p>
+                </a>
+                  <button class="delete-button"><span class="visually-hidden">Удалить</span></button>
+              </li>
+            </ul>
+            <div class="totals">
+              <p class="totals-text">Товаров: 2</p>
+              <p class="totals-text">Сумма: 2000 ₽</p>
+            </div>
+            <a class="popover-button" href="#">Открыть корзину</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -62,71 +98,44 @@
       <ul class="navigation-list">
         <li class="navigation-field">
           <a class="navigation-item" href="#">Каталог товаров</a>
-          <input class="navigation-button" type="button" name="Expand catalogue" value="expand">
-          <ul class="navigation-catalogue-categories">
-            <li>
-              <ul class="categories-list">
-                <li>
-                  <a class="navigation-catalogue-item" href="#">Виртуальная реальность</a>
-                </li>
-                <li>
-                  <a class="navigation-catalogue-item" href="#">Моноподы для селфи</a>
-                </li>
-                <li>
-                  <a class="navigation-catalogue-item" href="#">Экшн-камеры</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul class="categories-list">
-                <li>
-                  <a class="navigation-catalogue-item" href="#">Фитнес-браслеты</a>
-                </li>
-                <li>
-                  <a class="navigation-catalogue-item" href="#">Умные часы</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul class="categories-list">
-                <li>
-                  <a class="navigation-catalogue-item" href="#">Квадрокоптеры</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <button class="navigation-button navigation-button-open"></button>
+          <div class="catalogue-popover-wrapper">
+            <ul class="navigation-catalogue-categories">
+              <li>
+                <ul class="categories-list">
+                  <li>
+                    <a class="navigation-catalogue-item" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li>
+                    <a class="navigation-catalogue-item" href="#">Моноподы для селфи</a>
+                  </li>
+                  <li>
+                    <a class="navigation-catalogue-item" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="categories-list">
+                  <li>
+                    <a class="navigation-catalogue-item" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li>
+                    <a class="navigation-catalogue-item" href="#">Умные часы</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="categories-list">
+                  <li>
+                    <a class="navigation-catalogue-item" href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="navigation-field">
           <a class="navigation-item" href="#">Доставка</a>
-          <!-- <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-                <h2 class="delivery-form-title">Доставка под заказ</h2>
-                <input class="delivery-form-close" type="button" value="close">
-              <p class="delivery-form-field">
-                <label class="delivery-form-field-name">Ваше имя:
-                  <input type="text" name="buyer-name" placeholder="Введите имя" required>
-                </label>
-              </p>
-              <p class="delivery-form-field">
-                <label class="delivery-form-field-name">Ваш e-mail:
-                  <input type="email" name="buyer-email" placeholder="Введите email" required>
-                </label>
-              </p>
-              <p class="delivery-form-field">
-                <label class="delivery-form-field-name">Что нужно привезти:
-                  <input type="text" name="delivery-description" placeholder="В свободной форме" required>
-                </label>
-              </p>
-              <p class="delivery-form-field">
-                <label class="delivery-form-field-name">Количество:
-                  <input type="number" name="delivery-quantity" value="1" required>
-                </label>
-              </p>
-              <p class="delivery-form-field">
-                <label class="delivery-form-field-submit">
-                  <input type="submit" name="submit-button">
-                </label>
-              </p>
-            </form> -->
         </li>
         <li class="navigation-field">
           <a class="navigation-item" href="#">Гарантия</a>
@@ -158,35 +167,59 @@
           <h2 class="filter-title">Фильтр:</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Стоимость</legend>
+              <div class="range-scale">
+                <div class="range-bar">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <label class="catalog-filter-label">
+                    от <input class="range-input" type="number" value="0" name="min-price">
+                  </label>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                  <label class="catalog-filter-label">
+                    до <input class="range-input" type="number" value="5000" name="min-price">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Цвет</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-black" checked>
+                    <input class="control-input visually-hidden" type="checkbox" name="color-black" checked>
+                    <span class="control-mark"></span>
                     Черный
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-white" checked>
+                    <input class="control-input visually-hidden" type="checkbox" name="color-white" checked>
+                    <span class="control-mark"></span>
                     Белый
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-navy">
+                    <input class="control-input visually-hidden" type="checkbox" name="color-navy">
+                    <span class="control-mark"></span>
                     Синий
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-red">
+                    <input class="control-input visually-hidden" type="checkbox" name="color-red">
+                    <span class="control-mark"></span>
                     Красный
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="color-pink">
+                    <input class="control-input visually-hidden" type="checkbox" name="color-pink">
+                    <span class="control-mark"></span>
                     Розовый
                   </label>
                 </li>
@@ -197,13 +230,15 @@
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="if-bluetooth" value="yes" checked>
+                    <input class="control-input visually-hidden" type="radio" name="if-bluetooth" value="yes" checked>
+                    <span class="control-mark"></span>
                     Есть
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="if-bluetooth" value="no">
+                    <input class="control-input visually-hidden" type="radio" name="if-bluetooth" value="no">
+                    <span class="control-mark"></span>
                     Нет
                   </label>
                 </li>
@@ -220,6 +255,10 @@
               <option value="cheap">Дешёвые</option>
               <option value="expensive">Дорогие</option>
             </select>
+            <div class="filter-buttons">
+              <button class="filter-button filter-up"></button>
+              <button class="filter-button filter-down"></button>
+            </div>
           </div>
           <div class="item-cards">
             <ul class="product-list">
@@ -227,6 +266,12 @@
                 <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/product-images/amateur-selfie-stick.jpg" height="380"
                     width="360" alt="Любительская селфи-палка">
+                  <svg class="new-mark new-hidden" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="29" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
+                    <path d="M13.6 28.3V34h-2.3V24H13l4.6 6v-6H20v10H18l-4.5-5.7Zm18 3.7v2h-7V24h7v2H27v2h4V30h-4v2h4.7Zm7.5-8h2.2l1 3.3 1-3.2h2.2l-1.7
+                    4.6 1 2.6 2.5-7.2h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.9-10h2.5l2.5 7.3 1-2.6-1.7-4.6Z" fill="#000" fill-opacity=".6"/>
+                  </svg>
+                  <p class="main-page-button">Подробнее</p>
                   <h3 class="product-card-title">Любительская селфи-палка</h3>
                   <p class="product-card-price">500 ₽</p>
                 </a>
@@ -235,6 +280,12 @@
                 <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/product-images/professional-selfie-stick.jpg" height="380"
                     width="360" alt="Профессиональная селфи-палка">
+                  <svg class="new-mark new-hidden" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="29" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
+                    <path d="M13.6 28.3V34h-2.3V24H13l4.6 6v-6H20v10H18l-4.5-5.7Zm18 3.7v2h-7V24h7v2H27v2h4V30h-4v2h4.7Zm7.5-8h2.2l1 3.3 1-3.2h2.2l-1.7
+                    4.6 1 2.6 2.5-7.2h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.9-10h2.5l2.5 7.3 1-2.6-1.7-4.6Z" fill="#000" fill-opacity=".6"/>
+                  </svg>
+                  <p class="main-page-button">Подробнее</p>
                   <h3 class="product-card-title">Профессиональная селфи-палка</h3>
                   <p class="product-card-price">1 500 ₽</p>
                 </a>
@@ -243,6 +294,12 @@
                 <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/product-images/underwater-selfie-stick.jpg" height="380"
                     width="360" alt="Непотопляемая селфи-палка">
+                  <svg class="new-mark new-hidden" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="29" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
+                    <path d="M13.6 28.3V34h-2.3V24H13l4.6 6v-6H20v10H18l-4.5-5.7Zm18 3.7v2h-7V24h7v2H27v2h4V30h-4v2h4.7Zm7.5-8h2.2l1 3.3 1-3.2h2.2l-1.7
+                    4.6 1 2.6 2.5-7.2h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.9-10h2.5l2.5 7.3 1-2.6-1.7-4.6Z" fill="#000" fill-opacity=".6"/>
+                  </svg>
+                  <p class="main-page-button">Подробнее</p>
                   <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
                   <p class="product-card-price">2 500 ₽</p>
                 </a>
@@ -251,6 +308,12 @@
                 <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/product-images/follow-me-selfie-stick.jpg" height="380"
                     width="360" alt="Селфи-палка «Следуй за мной»">
+                  <svg class="new-mark new-hidden" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="29" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
+                    <path d="M13.6 28.3V34h-2.3V24H13l4.6 6v-6H20v10H18l-4.5-5.7Zm18 3.7v2h-7V24h7v2H27v2h4V30h-4v2h4.7Zm7.5-8h2.2l1 3.3 1-3.2h2.2l-1.7
+                    4.6 1 2.6 2.5-7.2h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.9-10h2.5l2.5 7.3 1-2.6-1.7-4.6Z" fill="#000" fill-opacity=".6"/>
+                  </svg>
+                  <p class="main-page-button">Подробнее</p>
                   <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
                   <p class="product-card-price">1 500 ₽</p>
                 </a>
@@ -360,6 +423,42 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal-cover modal-hidden">
+    <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="delivery-fieldset">
+        <h2 class="delivery-form-title">Доставка под заказ</h2>
+        <button class="delivery-form-close"><span class="visually-hidden">Закрыть</span></button>
+          <p class="delivery-form-field">
+            <label class="delivery-form-field-name" for="name-field">Ваше имя:</label>
+            <input class="delivery-form-input modal-name" id="name-field" type="text" name="buyer-name" placeholder="Введите имя">
+          </p>
+          <p class="delivery-form-field">
+            <label class="delivery-form-field-name" for="email-field">Ваш e-mail:</label>
+            <input class="delivery-form-input modal-email" id="email-field" type="email" name="buyer-email" placeholder="Введите email">
+            <span class="email-comment">Забавный у вас адрес</span>
+          </p>
+          <p class="delivery-form-field">
+            <label class="delivery-form-field-name" for="description-field">Что нужно привезти:</label>
+            <input class="delivery-form-input modal-description" id="description-field" type="text" name="delivery-description" placeholder="В свободной форме">
+          </p>
+          <div class="delivery-form-field">
+            <label class="delivery-form-field-name" for="quantity-field">Количество: </label>
+            <span class="modal-tooltip"></span>
+            <span class="tooltip-field">
+              Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+              к провозу багажа.
+            </span>
+            <div class="quantity-counter">
+              <button class="quantity-button quantity-less"><span class="visually-hidden">Меньше</span></button>
+              <input class="delivery-form-input modal-quantity" id="quantity-field" type="number" name="delivery-quantity" value="1" required>
+              <button class="quantity-button quantity-more"><span class="visually-hidden">Больше</span></button>
+            </div>
+          </div>
+        <button class="main-page-button" type="submit">Отправить</button>
+      </fieldset>
+    </form>
+  </div>
 </body>
 
 </html>
