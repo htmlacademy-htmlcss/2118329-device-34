@@ -65,7 +65,7 @@
         <li class="cart-button-area">
           <a class="header-button" href="#">
             <span class="items-number"></span>
-            <img class="cart-icon" src="images/header-icons/header-cart-icon.svg" alt="Иконка 'Корзина'">
+            <svg class="cart-icon" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.3 5.39-3.5.2L8.6.69c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.29l2.2 3.2H5.9L8 2.29Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .39)" d="M0 0h16v14H0z"/></clipPath></defs></svg>
             Корзина
           </a>
           <div class="cart-popover popover-closed">
@@ -97,11 +97,9 @@
     <nav class="navigation">
       <ul class="navigation-list index-navigation">
         <li class="navigation-field">
-          <a class="navigation-item" href="catalog.html">
-            Каталог товаров
-            <input class="navigation-button navigation-button-open" type="button" name="Expand catalogue">
-          </a>
-          <div class="catalogue-popover-wrapper popover-closed">
+          <a class="navigation-item" href="catalog.html">Каталог товаров</a>
+          <button class="navigation-button navigation-button-open"></button>
+          <div class="catalogue-popover-wrapper">
             <ul class="navigation-catalogue-categories">
               <li>
                 <ul class="categories-list">
@@ -371,7 +369,7 @@
       <section class="mailing-section">
         <div class="mailing-text">
           <h2 class="main-page-heading">Подпишитесь на рассылку</h2>
-          <p class="index-main-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками,
+          <p class="index-main-text">Еженедельный дайджест с обзорами новинок, <br>длительными тест-драйвами, распаковками,
             а также акции, спецпредложения и вот это вот всё.</p>
         </div>
         <div class="mailing-form">

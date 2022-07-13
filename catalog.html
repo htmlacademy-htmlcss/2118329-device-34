@@ -65,7 +65,7 @@
         <li class="cart-button-area">
           <a class="header-button" href="#">
             <span class="items-number"></span>
-            <img class="cart-icon" src="images/header-icons/header-cart-icon.svg" alt="Иконка 'Корзина'">
+            <svg class="cart-icon" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="m15.3 5.39-3.5.2L8.6.69c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.29l2.2 3.2H5.9L8 2.29Z" fill="#000"/></g><defs><clipPath id="a"><path fill="#fff" transform="translate(0 .39)" d="M0 0h16v14H0z"/></clipPath></defs></svg>
             Корзина
           </a>
           <div class="cart-popover popover-closed">
@@ -97,10 +97,9 @@
     <nav class="navigation">
       <ul class="navigation-list">
         <li class="navigation-field">
-          <a class="navigation-item" href="#">Каталог товаров
-            <input class="navigation-button navigation-button-open" type="button" name="Expand catalogue">
-          </a>
-          <div class="catalogue-popover-wrapper popover-closed">
+          <a class="navigation-item" href="#">Каталог товаров</a>
+          <button class="navigation-button navigation-button-open"></button>
+          <div class="catalogue-popover-wrapper">
             <ul class="navigation-catalogue-categories">
               <li>
                 <ul class="categories-list">
@@ -272,7 +271,7 @@
                     <path d="M13.6 28.3V34h-2.3V24H13l4.6 6v-6H20v10H18l-4.5-5.7Zm18 3.7v2h-7V24h7v2H27v2h4V30h-4v2h4.7Zm7.5-8h2.2l1 3.3 1-3.2h2.2l-1.7
                     4.6 1 2.6 2.5-7.2h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.9-10h2.5l2.5 7.3 1-2.6-1.7-4.6Z" fill="#000" fill-opacity=".6"/>
                   </svg>
-                  <a class="main-page-button" href="#">Подробнее</a>
+                  <p class="main-page-button">Подробнее</p>
                   <h3 class="product-card-title">Любительская селфи-палка</h3>
                   <p class="product-card-price">500 ₽</p>
                 </a>
@@ -286,7 +285,7 @@
                     <path d="M13.6 28.3V34h-2.3V24H13l4.6 6v-6H20v10H18l-4.5-5.7Zm18 3.7v2h-7V24h7v2H27v2h4V30h-4v2h4.7Zm7.5-8h2.2l1 3.3 1-3.2h2.2l-1.7
                     4.6 1 2.6 2.5-7.2h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.9-10h2.5l2.5 7.3 1-2.6-1.7-4.6Z" fill="#000" fill-opacity=".6"/>
                   </svg>
-                  <a class="main-page-button" href="#">Подробнее</a>
+                  <p class="main-page-button">Подробнее</p>
                   <h3 class="product-card-title">Профессиональная селфи-палка</h3>
                   <p class="product-card-price">1 500 ₽</p>
                 </a>
@@ -300,7 +299,7 @@
                     <path d="M13.6 28.3V34h-2.3V24H13l4.6 6v-6H20v10H18l-4.5-5.7Zm18 3.7v2h-7V24h7v2H27v2h4V30h-4v2h4.7Zm7.5-8h2.2l1 3.3 1-3.2h2.2l-1.7
                     4.6 1 2.6 2.5-7.2h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.9-10h2.5l2.5 7.3 1-2.6-1.7-4.6Z" fill="#000" fill-opacity=".6"/>
                   </svg>
-                  <a class="main-page-button" href="#">Подробнее</a>
+                  <p class="main-page-button">Подробнее</p>
                   <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
                   <p class="product-card-price">2 500 ₽</p>
                 </a>
@@ -314,7 +313,7 @@
                     <path d="M13.6 28.3V34h-2.3V24H13l4.6 6v-6H20v10H18l-4.5-5.7Zm18 3.7v2h-7V24h7v2H27v2h4V30h-4v2h4.7Zm7.5-8h2.2l1 3.3 1-3.2h2.2l-1.7
                     4.6 1 2.6 2.5-7.2h2.5L45.9 34h-2l-1.6-3.9-1.6 3.9h-2l-3.9-10h2.5l2.5 7.3 1-2.6-1.7-4.6Z" fill="#000" fill-opacity=".6"/>
                   </svg>
-                  <a class="main-page-button" href="#">Подробнее</a>
+                  <p class="main-page-button">Подробнее</p>
                   <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
                   <p class="product-card-price">1 500 ₽</p>
                 </a>
@@ -424,42 +423,42 @@
       </div>
     </div>
   </footer>
-</body>
 
-<div class="modal-cover modal-hidden">
-  <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-    <fieldset class="delivery-fieldset">
-      <h2 class="delivery-form-title">Доставка под заказ</h2>
-      <button class="delivery-form-close"><span class="visually-hidden">Закрыть</span></button>
-        <p class="delivery-form-field">
-          <label class="delivery-form-field-name" for="name-field">Ваше имя:</label>
-          <input class="delivery-form-input modal-name" id="name-field" type="text" name="buyer-name" placeholder="Введите имя">
-        </p>
-        <p class="delivery-form-field">
-          <label class="delivery-form-field-name" for="email-field">Ваш e-mail:</label>
-          <input class="delivery-form-input modal-email" id="email-field" type="email" name="buyer-email" placeholder="Введите email">
-          <span class="email-comment">Забавный у вас адрес</span>
-        </p>
-        <p class="delivery-form-field">
-          <label class="delivery-form-field-name" for="description-field">Что нужно привезти:</label>
-          <input class="delivery-form-input modal-description" id="description-field" type="text" name="delivery-description" placeholder="В свободной форме">
-        </p>
-        <div class="delivery-form-field">
-          <label class="delivery-form-field-name" for="quantity-field">Количество: </label>
-          <span class="modal-tooltip"></span>
-          <span class="tooltip-field">
-            Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
-            к провозу багажа.
-          </span>
-          <div class="quantity-counter">
-            <button class="quantity-button quantity-less"><span class="visually-hidden">Меньше</span></button>
-            <input class="delivery-form-input modal-quantity" id="quantity-field" type="number" name="delivery-quantity" value="1" required>
-            <button class="quantity-button quantity-more"><span class="visually-hidden">Больше</span></button>
+  <div class="modal-cover modal-hidden">
+    <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="delivery-fieldset">
+        <h2 class="delivery-form-title">Доставка под заказ</h2>
+        <button class="delivery-form-close"><span class="visually-hidden">Закрыть</span></button>
+          <p class="delivery-form-field">
+            <label class="delivery-form-field-name" for="name-field">Ваше имя:</label>
+            <input class="delivery-form-input modal-name" id="name-field" type="text" name="buyer-name" placeholder="Введите имя">
+          </p>
+          <p class="delivery-form-field">
+            <label class="delivery-form-field-name" for="email-field">Ваш e-mail:</label>
+            <input class="delivery-form-input modal-email" id="email-field" type="email" name="buyer-email" placeholder="Введите email">
+            <span class="email-comment">Забавный у вас адрес</span>
+          </p>
+          <p class="delivery-form-field">
+            <label class="delivery-form-field-name" for="description-field">Что нужно привезти:</label>
+            <input class="delivery-form-input modal-description" id="description-field" type="text" name="delivery-description" placeholder="В свободной форме">
+          </p>
+          <div class="delivery-form-field">
+            <label class="delivery-form-field-name" for="quantity-field">Количество: </label>
+            <span class="modal-tooltip"></span>
+            <span class="tooltip-field">
+              Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+              к провозу багажа.
+            </span>
+            <div class="quantity-counter">
+              <button class="quantity-button quantity-less"><span class="visually-hidden">Меньше</span></button>
+              <input class="delivery-form-input modal-quantity" id="quantity-field" type="number" name="delivery-quantity" value="1" required>
+              <button class="quantity-button quantity-more"><span class="visually-hidden">Больше</span></button>
+            </div>
           </div>
-        </div>
-      <button class="main-page-button" type="submit">Отправить</button>
-    </fieldset>
-  </form>
-</div>
+        <button class="main-page-button" type="submit">Отправить</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
 
 </html>
